@@ -1,6 +1,4 @@
-# npm-starter
-
-> A starter codebase for writing NPM packages using ES2015.
+![NPM Starter](http://i.imgur.com/KzOjCt4.png)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/deiucanta.svg?style=social?maxAge=2592000)](https://twitter.com/deiucanta)
 [![Version](https://img.shields.io/npm/v/npm-starter.svg)](https://www.npmjs.com/package/npm-starter)
