@@ -47,6 +47,34 @@ There are a few predefined NPM scripts available. Run them by typing this in you
 
 **NOTE:** There is another script `prepublish` that runs before you publish the package to NPM. All it does is to run `clean` and `build`.
 
+## Short Guides
+
+### How to add `object rest spread` capabilities?
+
+1. Install the Babel plugin via NPM
+
+```bash
+npm i --save-dev babel-plugin-transform-object-rest-spread
+```
+
+2. Add the `transform-object-rest-spread` to the plugins array in your `.babelrc` file.
+
+```json
+{
+  "presets": ["es2015"],
+  "plugins": [
+    "transform-runtime",
+    "transform-object-rest-spread"
+  ]
+}
+```
+
+3. Now you can use the spread operator (`...`) for objects as well!
+
+### Want to know how to use other experimental features?
+
+Open a new issue with the feature you want and I'll add a short tutorial for you - like the one above.
+
 ## Troubleshooting
 
 1. After I run `npm install` I get `UNMET PEER DEPENDENCY` for two packages?
