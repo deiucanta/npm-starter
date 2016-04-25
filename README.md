@@ -53,23 +53,60 @@ There are a few predefined NPM scripts available. Run them by typing this in you
 
 1. Install the Babel plugin via NPM
 
-```bash
-npm i --save-dev babel-plugin-transform-object-rest-spread
-```
+  ```bash
+  npm i --save-dev babel-plugin-transform-object-rest-spread
+  ```
 
 2. Add the `transform-object-rest-spread` to the plugins array in your `.babelrc` file.
 
-```json
-{
-  "presets": ["es2015"],
-  "plugins": [
-    "transform-runtime",
-    "transform-object-rest-spread"
-  ]
-}
-```
+  ```json
+  {
+    "presets": ["es2015"],
+    "plugins": [
+      "transform-runtime",
+      "transform-object-rest-spread"
+    ]
+  }
+  ```
 
 3. Now you can use the spread operator (`...`) for objects as well!
+
+### How to add support for React and JSX?
+
+1. Install the Babel plugin via NPM
+
+  ```bash
+  npm i --save-dev babel-preset-react
+  ```
+
+2. Add the `react` preset in your `.babelrc` file.
+
+  ```json
+  {
+    "presets": ["es2015", "react"],
+    "plugins": [
+      "transform-runtime"
+    ]
+  }
+  ```
+
+3. Install the ESlint React plugin via NPM
+
+  ```bash
+  npm i --save-dev eslint-plugin-react
+  ```
+
+4. Change the `extends` property in your `.eslintrc` file to be just `airbnb` instead of `airbnb/base`.
+
+  ```json
+  {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "rules": {}
+  }
+  ```
+
+P.S. This approach is perfect if you write a React library but if you build an app you might want to consider Webpack which helps you bundle everything/
 
 ### Want to know how to use other experimental features?
 
